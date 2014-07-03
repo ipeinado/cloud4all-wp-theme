@@ -1,5 +1,6 @@
 <?php
 
+// Add all scripts and stylesheets
 function twentytwelve_cloud4all_scripts() {
 
     wp_register_style('bootstrap-min', 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
@@ -15,5 +16,12 @@ function twentytwelve_cloud4all_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'twentytwelve_cloud4all_scripts' );
+
+// Add Cloud4all favicon
+function blog_favicon() {
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('stylesheet_directory').'/images/favicon.ico" />' . "\n";
+}
+add_action('wp_head', 'blog_favicon');
+
 
 ?>

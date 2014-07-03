@@ -8,4 +8,4 @@
  Version:      0.0.1
  Tags:         light, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twenty-twelve-child
-*/@import url("../twentytwelve/style.css");
+*/@import url("../twentytwelve/style.css");#cards-banner{position:absolute;top:0;right:0;display:block;width:360px;height:132px}#cards-banner h2{font-weight:bold;color:#3670AF;font-size:1em}#cards-banner p{width:260px;font-size:.8em;margin-bottom:1em}#cards-banner #nfc-reader{width:70px;height:132px;position:absolute;top:0;right:0;background:transparent url(images/nfc_reader.png) top right no-repeat}ul#card-list li{display:inline-block;cursor:move}.card{background:-moz-linear-gradient(top, #53a4c0,#3873b0);background:-webkit-linear-gradient(top, #53a4c0,#3873b0);background:linear-gradient(to bottom, #53a4c0,#3873b0);display:inline-block;color:white;float:left;width:48px;height:42px;text-align:center;font-weight:normal;font-size:9pt;vertical-align:middle;padding-top:20px;border-radius:4px}
