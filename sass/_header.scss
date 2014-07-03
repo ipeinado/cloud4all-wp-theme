@@ -1,0 +1,26 @@
+@import 'compass';
+
+$header_background: #F0EFEC;
+
+.site-header {
+	@include clearfix;
+	position: relative;
+	border-top: 1.25em solid #3670AF;
+	background: $header_background url(images/bg_header.png) top left repeat-x;
+}
+
+.main-navigation {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.site-header {
+		height: 120px;
+		padding: 24px 2.8em 0 2.8em;
+		padding: 1.714285714rem 2.8em 0 2.8em; 
+	}
+
+	.main-navigation {
+		background: $header_background;
+	}
+}

@@ -1,4 +1,7 @@
 $ ->
+
+	console.log "in card demo"
+
 	MSG_IDLE: "Drag one of the cards over the NFC reader in the right and see how the contents will autoadapt to the user's needs and preferences."
 	MSG_SAMMY: "Sammy likes high contrast. Move Sammy's card over the NFC reader on the right to see how the page adapts to his needs."    
 	MSG_SAMMY_ON: "You are now keyed in as Sammy. If you want to key out and get back to the normal page, move Sammy's card over the NFC reader"

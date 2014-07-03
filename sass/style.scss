@@ -13,4 +13,14 @@
 For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
 */
 @import url("../twentytwelve/style.css");
+@import "header";
 @import "card-demo";
+
+@media screen and (min-width: 960px) {
+	body .site {
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 48px;
+		margin-bottom: 3.428571429rem;
+	}
+}
