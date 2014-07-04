@@ -1,0 +1,109 @@
+/* Footer */
+
+footer a {
+	color: white;
+	text-decoration: none;
+
+	&:hover {
+		color: #B8DCF0;	
+		text-decoration: underline;
+	}
+}
+
+footer#colophon {
+	background: #3a3d3a;
+	padding: 24px;
+}
+
+div.footer-menus {
+
+	a {
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			color: #B8DCF0;	
+			text-decoration: underline;
+		}
+	}
+
+	ul.menu {
+		text-transform: uppercase;
+	}
+
+	ul.sub-menu {
+		text-transform: none;
+		padding: .5em 0 1em;
+	}
+
+	ul.sub-menu li {
+		padding-left: .5em;
+	}
+}
+
+footer#footer-ops {
+	background: #33322f;
+	color: #FFF;
+	padding: 24px;
+
+	p, a {
+		font-size: 0.8em;	
+	}
+	
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	.site-info {
+		padding-bottom: 1rem;
+	}
+}
+
+#ec-info img {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+
+@media screen and (min-width: 782px) {
+	footer#colophon {
+		background: #3a3d3a url('images/logo_cloud4all_tiny.png') 2.8em 1.875em no-repeat;
+		clear: both;
+		font-size: 0.857142857rem;
+		line-height: 2;
+		margin-top: 24px;
+		margin-top: 1.714285714rem;
+		padding: 24px 0 24px 21em;
+		padding: 1.714285714rem 3rem 1.714285714rem 19em; 
+	}
+
+	div.footer-menus {
+		div {
+			width: 22%;
+			display: table-cell;
+			padding-right: 0.5em;
+		}
+
+	}
+
+	footer#footer-ops {
+		display: table;
+		background: #33322f url(images/bg_footer.png) left bottom repeat-x;
+		position: relative;
+		clear: both;
+		padding: 24px 0;
+		padding: 1.714285714rem 3rem 1.714285714rem 3rem;
+	}
+
+	footer div.site-info {
+		display: table-cell;
+		width: 20%;
+	}
+
+	footer div.site-info#ec-info {	
+		width: 50%;
+		padding-right: 4em;
+	}
+}
+

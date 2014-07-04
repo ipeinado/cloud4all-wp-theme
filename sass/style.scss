@@ -13,9 +13,10 @@
 For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
 */
 @import url("../twentytwelve/style.css");
+@import "compass";
 @import "header";
 @import "card-demo";
-@import "compass";
+@import "footer";
 
 $blue-dark: #133E5B;
 $blue-medium: #2782BB;
@@ -34,6 +35,7 @@ $fuchsia: #990099;
 
 	&:hover {
 		background: $fuchsia;
+		color: white;
 	}
 
 	&:active {

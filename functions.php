@@ -40,5 +40,18 @@ function blog_favicon() {
 }
 add_action('wp_head', 'blog_favicon');
 
+// Footer menus
+function register_footer_menus() {
+	register_nav_menus( 
+		array(
+			'footer_project_menu' => 'ProjectMenu',
+			'footer_research_menu' => 'ResearchMenu',
+			'footer_development_menu' => 'DevelopmentMenu',
+			'footer_dissemination_menu' => 'DisseminationMenu',
+			'footer_utilities_menu' => 'UtilitiesMenu'
+		) 
+	);
+}
+add_action('after_setup_theme', 'register_footer_menus', 11);
 
 ?>
