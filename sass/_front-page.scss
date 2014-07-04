@@ -1,0 +1,25 @@
+@import 'compass';
+
+#project-banner {
+	@include clearfix;
+	background-color: black;
+	width: 100%;
+	box-sizing: border-box;
+	height: 320px;
+	clear: both;
+	position: relative;
+}
+
+#video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#video-container {
+
+	video {
+		display: block;
+		margin: 0 auto;
+	}
+}
