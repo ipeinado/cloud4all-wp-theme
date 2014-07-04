@@ -15,6 +15,11 @@ body.custom-background-white .site {
 	margin-top: 0;
 	padding: 0;
 }
+
+body #page {
+	margin: 0 auto;
+}
+
 .assistive-text,
 .site .screen-reader-text {
 	clip: rect(1px 1px 1px 1px); /* IE7 */
@@ -46,7 +51,7 @@ img[class*="attachment-"] {
 	margin: 48px auto;
 	max-width: 960px;
 	overflow: hidden;
-	padding: 0 40px;
+	padding: 0;
 }
 .site-content {
 	float: left;
@@ -61,6 +66,11 @@ body.full-width .site-content {
 	float: right;
 	width: 26.041666667%;
 }
+
+.site-header {
+	width: 100%;
+}
+
 .site-header h1,
 .site-header h2 {
 	text-align: left;
@@ -69,10 +79,24 @@ body.full-width .site-content {
 	font-size: 26px;
 	line-height: 1.846153846;
 }
+
+.site-header hgroup {
+	padding: 0 20px;
+}
+
+.site-header h1#logo {
+	float: left;
+}
+
+.site-description {
+	display: none;
+}
+
+
 .main-navigation ul.nav-menu,
 .main-navigation div.nav-menu > ul {
-	border-bottom: 1px solid #ededed;
-	border-top: 1px solid #ededed;
+	background-color: #F0EFEC;
+	padding: 0 20px;
 	display: inline-block !important;
 	text-align: left;
 	width: 100%;
@@ -100,7 +124,8 @@ body.full-width .site-content {
 	color: #000;
 }
 .main-navigation li {
-	margin: 0 40px 0 0;
+	margin: 0;
+	padding: 0 20px;
 	position: relative;
 }
 .main-navigation li ul {

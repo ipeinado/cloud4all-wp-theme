@@ -1,31 +1,83 @@
+MSG_IDLE = "Drag one of the cards over the NFC reader in the right and see how the contents will autoadapt to the user's needs and preferences."
+MSG_SAMMY = "Sammy likes high contrast. Move Sammy's card over the NFC reader on the right to see how the page adapts to his needs."    
+MSG_SAMMY_ON = "You are now keyed in as Sammy. If you want to key out and get back to the normal page, move Sammy's card over the NFC reader"
+MSG_CARLA = "Carla likes big fonts and no images. Move Carla's card over the NFC reader on the right to see how the page adapts to her needs"
+MSG_CARLA_ON = "You are now keyed in as Carla. If you want to key out and get back to the normal page, move Carla's card over the NFC reader"
+MSG_ACTIVE = MSG_IDLE
+userKeyed = userKeyed or false
+
+draggable_options =
+	containment: "#cards-banner"
+	cursor: "move"
+	revert: true
+	stop: (event, ui) ->
+		$("#card-tooltip-text").html MSG_ACTIVE	
+
+keyUserIn = (token) ->
+	$.cookie "token", token
+	$('html').attr "token", token
+	if token is "sammy"
+		MSG_ACTIVE = MSG_SAMMY_ON
+		$("#card-sammy").addClass "active"
+		$("#card-carla").removeClass "active"
+	
+	if token is "carla"
+		MSG_ACTIVE = MSG_CARLA_ON
+		$("#card-carla").addClass "active"
+		$("#card-sammy").removeClass "active"
+
+	$("#card-tooltip-text").html MSG_ACTIVE
+
 $ ->
 
-	console.log "in card demo"
+	token = $.cookie "token"
 
-	MSG_IDLE: "Drag one of the cards over the NFC reader in the right and see how the contents will autoadapt to the user's needs and preferences."
-	MSG_SAMMY: "Sammy likes high contrast. Move Sammy's card over the NFC reader on the right to see how the page adapts to his needs."    
-	MSG_SAMMY_ON: "You are now keyed in as Sammy. If you want to key out and get back to the normal page, move Sammy's card over the NFC reader"
-	MSG_CARLA: "Carla likes big fonts and no images. Move Carla's card over the NFC reader on the right to see how the page adapts to her needs"
-	MSG_CARLA_ON: "You are now keyed in as Carla. If you want to key out and get back to the normal page, move Carla's card over the NFC reader"
-	
-	userKeyed = userKeyed or false
-
-	token = $.cookie("token") or ""
-
-	if token is ""
-		$("html").removeAttr "token"
+	if typeof token is 'undefined'
 		userKeyed = false
 	else
-		$("html").attr "token", token
 		userKeyed = true
-
-		if token is "sammy"
-			$("#card-tooltip-text").html MSG_SAMMY_ON
-		else
-			if token is "carla"
-				$("#card-tooltip-text").html MSG_CARLA_ON
+		console.log token
+		keyUserIn token
 
 	$('#card-sammy').hover ->
 		$("#card-tooltip-text").html MSG_SAMMY
 	, ->
+		$("#card-tooltip-text").html MSG_ACTIVE
+
+	$('#card-carla').hover ->
 		$("#card-tooltip-text").html MSG_CARLA
+	, ->
+		$("#card-tooltip-text").html MSG_ACTIVE
+
+	$("#card-sammy").draggable draggable_options
+	$("#card-carla").draggable draggable_options
+
+	$("#nfc-reader").droppable
+		tolerance: 'fit'
+		activeClass: 'active'
+		over: (event, ui) ->
+			if userKeyed is on
+				if token is (ui.draggable.attr "data-token")
+					$.removeCookie "token"
+					$("html").removeAttr "token"
+					$("#card-tooltip-text").html "<br />KEYING OUT...<br />"
+					userKeyed = false
+					MSG_ACTIVE = MSG_IDLE
+					$("#card-sammy").removeClass "active"
+					$("#card-carla").removeClass "active"
+				else
+					$("#card-tooltip-text").html "<br />KEYING IN...<br />"
+					token = ui.draggable.attr "data-token"
+					keyUserIn token
+			else
+				$("#card-tooltip-text").html "<br />KEYING IN...<br />"
+				userKeyed = true
+				token = ui.draggable.attr "data-token"
+				keyUserIn token
+
+
+
+
+
+		
+

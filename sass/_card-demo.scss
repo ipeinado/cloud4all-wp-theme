@@ -35,6 +35,10 @@
 		background: transparent url(images/nfc_reader.png) top right no-repeat;
 	}
 
+	#nfc-reader.active {
+		@include single-box-shadow(0px, 1px, 2px, 2px, #3670AF);
+	}
+
 	ul#card-list li {
 		display: inline-block;
 		cursor: move;
@@ -54,6 +58,13 @@
 		vertical-align: middle;
 		padding-top: 20px;
 		border-radius: 4px;
+	}
+
+	.card-item.active {
+		.card {
+			background: #990099;
+			@include background-image(linear-gradient(top, #990099, #CC33CC));	
+		}
 	}	
 }
 

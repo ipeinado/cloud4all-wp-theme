@@ -3,7 +3,7 @@ $ ->
 	console.log "in scripts"
 
 	navMenuTop = $('.main-navigation').offset().top
-	pageWidth = $('#page').width()
+	pageWidth = $('#page').width() - 48
 
 	$(window).scroll -> 
 		if $(window).scrollTop() > navMenuTop

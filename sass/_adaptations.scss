@@ -1,0 +1,150 @@
+/* ADAPTATIONS */
+html[token="carla"] {
+	body {
+		font-size: 1.4em;
+	}
+
+	#page {
+		max-width: 1400px;
+	}
+
+	.site-header {
+		height: 220px;
+	}
+
+	#logo {
+		zoom: 1.4;
+	}
+
+	footer {
+		max-width: 1400px;
+		font-size: 1em !important;
+	}
+
+	hgroup {
+		margin-top: 3em;
+		margin-bottom: 5em;
+	}
+
+	#cards-banner {
+		width: 400px;
+
+		p {
+			line-height: 1.4em;
+		}
+	}
+
+	.card {
+		font-size: 14pt;
+		width: 64px;
+		height: 64px;
+	}
+
+	.template-front-page .widget-area .widget li {
+		font-size: 1em;
+	}
+
+	#project-banner #video-container {
+		height: 420px;
+	}
+
+	#project-banner #video-overlay {
+		background: #000;
+	}
+} 
+
+/* SAMMY */
+
+html[token="sammy"] {
+	body {
+		background: #000;
+	}	
+
+	#main {
+		background: #000;
+	}
+
+	#page {
+		border-left: 2px solid #FFF;
+		border-right: 2px solid #FFF;
+	}
+
+	a {
+		color: #B8DCF0 !important;
+		text-decoration: underline;
+	}
+
+	.site-header {
+		background: #000;
+		color: white;
+	}
+
+	.main-navigation {
+		background-color: black;
+		border-bottom: 2px solid white;
+	}
+
+	.main-navigation .current-menu-item > a, 
+	.main-navigation .current-menu-ancestor > a, 
+	.main-navigation .current_page_item > a, 
+	.main-navigation .current_page_ancestor > a,
+	.main-navigation .current_page_parent > a {
+		color: #000 !important;
+	}
+
+	.site-header #cards-banner h2 {
+		color: #B8DCF0;
+	}
+
+	.site-content {
+		background: #000;
+		color: #FFF;
+	}
+
+	.frp-all-category-news, .twitter-follow-button {
+		color: #000 !important;
+	}
+
+	footer.entry-meta {
+		color: white;
+	}
+
+	.widget-area .widget h3 {
+		color: #FFF;
+	}
+
+	.widget-area ul.sub-menu li a {
+		color: #B8DCF0 !important;
+		text-decoration: underline;
+	}
+
+	footer#colophon, footer#footer-ops  {
+		margin-top: 0;
+		background: #000;
+	}
+
+	#video-overlay {
+		background: #000 !important;
+	}
+
+	#newsflash ul li .category a {
+		color: white;
+	}
+
+	.horizontal-banner h2 {
+		color: #FFF !important;
+	}
+
+	.widget h2 {
+		color: #FFF;
+	}
+
+	.frp-widget a, .widget_displaytweetswidget p a {
+		color: #B8DCF0 !important;
+	}
+
+	textarea {
+		color: #FFF;
+		background: #000;
+	}
+} 

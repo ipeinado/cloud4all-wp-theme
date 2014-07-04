@@ -7,20 +7,72 @@ $header_background: #F0EFEC;
 	position: relative;
 	border-top: 1.25em solid #3670AF;
 	background: $header_background url(images/bg_header.png) top left repeat-x;
+
+	h1#logo {
+		display: block;
+		margin: 0 auto 20px;
+		width: 260px;
+		height: 78px;
+		background: transparent url(images/header_logo.png) top left no-repeat;
+		text-indent: -3333px;
+	}
 }
 
 .main-navigation {
 	margin-top: 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 782px) {
 	.site-header {
-		height: 120px;
+		height: 112px;
 		padding: 24px 2.8em 0 2.8em;
-		padding: 1.714285714rem 2.8em 0 2.8em; 
+		padding: 2.414285714rem 2.8em 0 2.8em; 
+
+		h1#logo {
+			text-align: left;
+			float: left;
+		}
+
+		.site-description {
+			display: none;
+		}
 	}
 
 	.main-navigation {
 		background: $header_background;
+		padding: 0 24px;
+	}
+
+	.main-navigation li {
+		margin: 0 12px 0 0;
+		margin: 0 0.5rem 0 0;
+		position: relative;
+		padding: 0 1em;
+	}
+
+	.main-navigation li a {
+		border-bottom: 0;
+		color: #000;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+	
+	.main-navigation li a:hover {
+		color: #123F72;
+	}
+
+	.main-navigation .current-menu-item,
+	.main-navigation .current-menu-ancestor,
+	.main-navigation .current_page_item,
+	.main-navigation .current_page_ancestor,
+	.main-navigation .current-page-ancestor,
+	.main-navigation .current_page_parent {
+		@include border-top-left-radius(5px);
+		@include border-top-right-radius(5px);
+		background: white;
+	}
+
+	.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+		border: 0;
 	}
 }

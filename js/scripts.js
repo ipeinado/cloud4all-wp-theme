@@ -3,7 +3,7 @@
     var navMenuTop, pageWidth;
     console.log("in scripts");
     navMenuTop = $('.main-navigation').offset().top;
-    pageWidth = $('#page').width();
+    pageWidth = $('#page').width() - 48;
     return $(window).scroll(function() {
       if ($(window).scrollTop() > navMenuTop) {
         if (pageWidth > 600) {
