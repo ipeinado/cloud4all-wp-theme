@@ -96,6 +96,16 @@ html[token="sammy"] {
 		color: #000 !important;
 	}
 
+	.main-navigation li ul li a {
+		background: black;
+		color: white;
+
+		&:hover, &:focus {
+			background: #333;
+			color: white;
+		}
+	}
+
 	.site-header #cards-banner h2 {
 		color: #B8DCF0;
 	}

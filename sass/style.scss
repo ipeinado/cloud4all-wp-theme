@@ -15,10 +15,32 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 @import url("../twentytwelve/style.css");
 @import "header";
 @import "card-demo";
+@import "compass";
 
+$blue-dark: #133E5B;
+$blue-medium: #2782BB;
+$blue-light: #DAEEF3;
+$fuchsia: #990099;
 // mobile version
-.main-navigation ul.nav-menu.toggled-on ul.children {
+.nav-menu.toggled-on ul.sub-menu {
 	display: none;
+}
+
+.menu-toggle {
+	@include border-radius(0px);
+	background: $blue-medium;
+	border: 0;
+	color: white;
+
+	&:hover {
+		background: $fuchsia;
+	}
+
+	&:active {
+		background: $fuchsia;
+		color: white;
+		box-shadow: none;
+	}
 }
 
 // full screen
