@@ -25,7 +25,9 @@
   };
 
   keyUserIn = function(token) {
-    $.cookie("token", token);
+    $.cookie("token", token, {
+      path: "/"
+    });
     $('html').attr("token", token);
     if (token === "sammy") {
       MSG_ACTIVE = MSG_SAMMY_ON;
@@ -43,8 +45,9 @@
   $(function() {
     var token;
     token = $.cookie("token");
-    if (typeof token === 'undefined') {
+    if (typeof token === !"undefined" && token === !null) {
       userKeyed = false;
+      console.log("no token");
     } else {
       userKeyed = true;
       console.log(token);
@@ -68,11 +71,17 @@
       over: function(event, ui) {
         if (userKeyed === true) {
           if (token === (ui.draggable.attr("data-token"))) {
-            $.removeCookie("token");
             $("html").removeAttr("token");
             $("#card-tooltip-text").html("<br />KEYING OUT...<br />");
+            console.log("keying out " + token);
             userKeyed = false;
             MSG_ACTIVE = MSG_IDLE;
+            $.cookie("token", null, {
+              path: "/"
+            });
+            $.removeCookie("token", {
+              path: "/"
+            });
             $("#card-sammy").removeClass("active");
             return $("#card-carla").removeClass("active");
           } else {

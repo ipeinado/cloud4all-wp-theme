@@ -14,7 +14,7 @@ draggable_options =
 		$("#card-tooltip-text").html MSG_ACTIVE	
 
 keyUserIn = (token) ->
-	$.cookie "token", token
+	$.cookie "token", token, path : "/"
 	$('html').attr "token", token
 	if token is "sammy"
 		MSG_ACTIVE = MSG_SAMMY_ON
@@ -32,8 +32,9 @@ $ ->
 
 	token = $.cookie "token"
 
-	if typeof token is 'undefined'
+	if typeof token is not "undefined" and token is not null
 		userKeyed = false
+		console.log "no token"
 	else
 		userKeyed = true
 		console.log token
@@ -58,11 +59,13 @@ $ ->
 		over: (event, ui) ->
 			if userKeyed is on
 				if token is (ui.draggable.attr "data-token")
-					$.removeCookie "token"
 					$("html").removeAttr "token"
 					$("#card-tooltip-text").html "<br />KEYING OUT...<br />"
+					console.log "keying out #{token}"
 					userKeyed = false
 					MSG_ACTIVE = MSG_IDLE
+					$.cookie "token", null, path : "/"
+					$.removeCookie "token", path : "/"
 					$("#card-sammy").removeClass "active"
 					$("#card-carla").removeClass "active"
 				else
