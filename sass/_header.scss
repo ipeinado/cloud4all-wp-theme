@@ -42,9 +42,11 @@ $header_background: #F0EFEC;
 	.main-navigation {
 		background: $header_background;
 		padding: 0 24px;
+		z-index: 4;
 	}
 
 	.main-navigation li {
+		display: inline-block;
 		margin: 0 12px 0 0;
 		margin: 0 0.5rem 0 0;
 		position: relative;
@@ -56,10 +58,10 @@ $header_background: #F0EFEC;
 		color: #000;
 		text-transform: uppercase;
 		white-space: nowrap;
-	}
-	
-	.main-navigation li a:hover {
-		color: #123F72;
+
+		&:hover {
+			color: #123F72;	
+		}
 	}
 
 	.main-navigation .current-menu-item,
@@ -79,6 +81,7 @@ $header_background: #F0EFEC;
 
 	.main-navigation li ul {
 		left: -12px;
+		z-index: 5;
 	}
 
 	.main-navigation li ul li a {

@@ -4,7 +4,7 @@
     console.log("in scripts");
     navMenuTop = $('.main-navigation').offset().top;
     pageWidth = $('#page').width() - 48;
-    return $(window).scroll(function() {
+    $(window).scroll(function() {
       if ($(window).scrollTop() > navMenuTop) {
         if (pageWidth > 600) {
           return $('.main-navigation').css({
@@ -19,6 +19,11 @@
           top: '0px'
         });
       }
+    });
+    return $('#video-play-link').click(function(e) {
+      e.preventDefault();
+      $('#video-overlay').hide();
+      return $('#home-video').trigger("play");
     });
   });
 

@@ -16,3 +16,8 @@ $ ->
 			$('.main-navigation').css
 				position: 'static'
 				top: '0px'
+
+	$('#video-play-link').click (e) ->
+		e.preventDefault()
+		$('#video-overlay').hide()
+		$('#home-video').trigger "play"

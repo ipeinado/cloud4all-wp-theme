@@ -11,15 +11,85 @@
 }
 
 #video-overlay {
+	@include clearfix;
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 320px;
+	z-index: 3;
+	background: url(images/project-banner-background.png) top center no-repeat;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+
+	h1 {
+		font-size: 20pt;
+		margin-bottom: 20px;
+		color: white;
+		@include single-text-shadow(0px, 0px, 3px, 3px, #333);
+	}
+
+	p {
+		color: white;
+		margin-bottom: 20px;
+	}
+
+	a {
+		color: white;
+	}
+
+	a#video-play-link {
+		text-transform: uppercase;
+		font-size: 1.2em;
+	}
 }
 
 #video-container {
+	z-index: 2;
 
 	video {
 		display: block;
 		margin: 0 auto;
+
+		p {
+			padding: 1em;
+			color: white;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: 782px) {
+	#video-overlay {
+		padding: 20px 60px;
+		height: 320px;
+		color: white;
+		h1 {
+			font-size: 36pt;
+			@include single-text-shadow(0px, 0px, 2px, 3px, #333);
+			color: white;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 16pt;
+			line-height: 1.4em;
+			margin-bottom: 32px;
+		}
+
+		a {
+			color: white;
+		}
+
+		a#video-play-link {
+			font-size: 18pt;
+			padding: 6px 0 8px 56px;
+			background: url(images/play_button.png) top left no-repeat;
+
+			&:hover {
+				@include single-text-shadow(0px, 0px, 2px, 1px, #FFF);
+			}
+		}
 	}
 }
