@@ -94,7 +94,7 @@ get_header(); ?>
         <div class="tweets-container">
             <ul class="tweets">
                 <?php
-                    $tweets = getTweets("Cloud4all7FP", 3);
+                    $tweets = getTweets("Cloud4all7FP", 3, array("exclude_replies" => true, "include_rts" => false));
 
                     foreach($tweets as $tweet) {
                         if ($tweet['text']) {
@@ -134,7 +134,7 @@ get_header(); ?>
 
                             echo '<li>' .
                                     '<time>' .
-                                    date("M d \, y", strtotime($tweet['created_at'])).
+                                    date("F d\, Y", strtotime($tweet['created_at'])).
                                     '</time>'.
                                     '<p>'.
                                     $the_tweet.
