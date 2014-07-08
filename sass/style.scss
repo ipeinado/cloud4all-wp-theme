@@ -28,6 +28,19 @@ $fuchsia: #990099;
 	display: none;
 }
 
+a {
+	color: $blue-medium;
+	text-decoration: none;
+
+	&:hover, &:active {
+		color: $blue-dark;
+	}
+}
+
+p {
+	line-height: 1.4em;
+}
+
 .menu-toggle {
 	@include border-radius(0px);
 	background: $blue-medium;

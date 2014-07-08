@@ -90,18 +90,26 @@
 		}
 
 		a {
-			float: right; 
-			color: #3d3d3d;
-			text-decoration: none;
-			padding: .3em .5em;
-			border: 1px solid #CCC;
-			@include border-radius(4px);
-
-			&:hover {
-				background: #EEE;
-			}
+			float: right;
 		}
 	}
+}
+
+#news-banner header a, .section-link {
+	color: #3d3d3d;
+	text-decoration: none;
+	padding: .3em .5em;
+	border: 1px solid #CCC;
+	@include border-radius(4px);
+
+	&:hover {
+		background: #EEE;
+	}
+}
+
+.section-link {
+	display: inline-block;
+	text-transform: uppercase;
 }
 
 #news-section {
@@ -130,7 +138,32 @@
 	}
 }
 
+ul.tweets {
+	li {
+		display: block;
+		padding-bottom: .5em;
+		margin-bottom: .5em;
+		border-bottom: 1px solid #CCC;
 
+		a {
+			text-decoration: none;
+		}
+
+		time {
+			display: block;
+			font-size: .9em;
+			color: #666;
+			margin-bottom: .3em;
+		}
+
+		.twitter-intents {
+			p {
+				display: inline-block;
+				margin: .5em .5em .5em 0;
+			}
+		}
+	}
+}
 
 @media screen and (min-width: 782px) {
 
@@ -182,19 +215,6 @@
 		width: 33%;
 		padding-top: 180px;
 
-		.section-link {
-			@include border-radius(4px);
-			display: inline-block;
-			background: #3a3d3a;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: white;
-			padding: 0.5em 0.8em;
-
-			&:hover {
-				background: #666;
-			}
-		}
 	}
 
 	#research-section {
@@ -217,7 +237,7 @@
 
 		li.news-item {
 			display: inline-block;
-			box-sizing: border-box; 
+			box-sizing: border-box;
 			padding-right: 12px;
 			width: 48%;
 			height: 120px;
