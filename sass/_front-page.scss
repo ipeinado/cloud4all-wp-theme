@@ -60,9 +60,86 @@
 	}
 }
 
+.section {
+	margin: 20px 0;
+	text-align: center;
+
+	h2 {
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+
+	p {
+		line-height: 1.4em;
+		margin-bottom: 18px;
+	}
+}
+
+#news-banner {
+	@include clearfix;
+	margin: 36px 0;
+
+	header {
+		padding-bottom: 12px;
+		margin-bottom: 36px;
+		border-bottom: 1px solid #CCC;
+
+		h2 {
+			font-size: 18px;
+			display: inline-block;
+		}
+
+		a {
+			float: right; 
+			color: #3d3d3d;
+			text-decoration: none;
+			padding: .3em .5em;
+			border: 1px solid #CCC;
+			@include border-radius(4px);
+
+			&:hover {
+				background: #EEE;
+			}
+		}
+	}
+}
+
+#news-section {
+
+	img {
+		display: none;
+	}
+
+	ul.news-list {
+
+	}
+
+	li.news-item {
+		margin-bottom: 20px;
+	}
+
+	a.news-headline {
+		display: block;
+		margin-bottom: 6px;
+	}
+
+	p.news-date {
+		font-size: 0.9em;
+		color: #666;
+		margin-bottom: 12px;
+	}
+}
+
+
+
 @media screen and (min-width: 782px) {
+
+	.template-front-page .site-content {
+		margin-top: 0;
+	}
+
 	#video-overlay {
-		padding: 20px 60px;
+		padding: 24px 60px;
 		height: 320px;
 		color: white;
 		h1 {
@@ -92,4 +169,78 @@
 			}
 		}
 	}
+
+	#sections-banner {
+		@include clearfix;
+		margin-top: 20px;
+	}
+
+	.section {
+		display: inline-block;
+		padding: 0 20px;
+		box-sizing: border-box;
+		width: 33%;
+		padding-top: 180px;
+
+		.section-link {
+			@include border-radius(4px);
+			display: inline-block;
+			background: #3a3d3a;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			padding: 0.5em 0.8em;
+
+			&:hover {
+				background: #666;
+			}
+		}
+	}
+
+	#research-section {
+		background: url(images/research_section_icon.png) top center no-repeat;
+	}
+
+	#development-section {
+		background: url(images/development_section_icon.png) top center no-repeat;
+	}
+
+	#dissemination-section {
+		background: url(images/dissemination_section_icon.png) top center no-repeat;
+	}
+
+	#news-section {
+		padding: 0 0 0 20px;
+		width: 66%;
+		float: left;
+		box-sizing: border-box;
+
+		li.news-item {
+			display: inline-block;
+			box-sizing: border-box; 
+			padding-right: 12px;
+			width: 48%;
+			height: 120px;
+			overflow: hidden;
+		}
+
+		img {
+			display: block;
+			float: left;
+			margin-right: 12px;
+			margin-bottom: 56px;
+			width: 64px;
+			height: 64px;
+			@include border-radius(50%);
+		}
+	}
+
+	#tweets-feed {
+		display: inline-block;
+		padding: 0 20px;
+		width: 33%;
+		box-sizing: border-box;
+	}
+
+
 }

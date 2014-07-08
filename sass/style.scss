@@ -46,6 +46,10 @@ $fuchsia: #990099;
 	}
 }
 
+.site-description {
+	display: none;
+}
+
 // full screen
 @media screen and (min-width: 960px) {
 	body .site {

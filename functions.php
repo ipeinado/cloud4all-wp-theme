@@ -54,4 +54,9 @@ function register_footer_menus() {
 }
 add_action('after_setup_theme', 'register_footer_menus', 11);
 
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 ?>
