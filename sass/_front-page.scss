@@ -1,5 +1,15 @@
 @import 'compass';
 
+.template-front-page {
+	h2 {
+		font-size: 18px;
+	}
+
+	p {
+		margin-bottom: 12px;
+	}
+}
+
 #project-banner {
 	@include clearfix;
 	background-color: black;
@@ -24,7 +34,7 @@
 	text-align: center;
 
 	h1 {
-		font-size: 20pt;
+		font-size: 22px;
 		margin-bottom: 20px;
 		color: white;
 		@include single-text-shadow(0px, 0px, 3px, 3px, #333);
@@ -58,6 +68,10 @@
 			text-align: center;
 		}
 	}
+
+	label {
+		display: none;
+	}
 }
 
 .section {
@@ -65,7 +79,6 @@
 	text-align: center;
 
 	h2 {
-		font-size: 18px;
 		margin-bottom: 12px;
 	}
 
@@ -85,25 +98,12 @@
 		border-bottom: 1px solid #CCC;
 
 		h2 {
-			font-size: 18px;
 			display: inline-block;
 		}
 
 		a {
 			float: right;
 		}
-	}
-}
-
-#news-banner header a, .section-link {
-	color: #3d3d3d;
-	text-decoration: none;
-	padding: .3em .5em;
-	border: 1px solid #CCC;
-	@include border-radius(4px);
-
-	&:hover {
-		background: #EEE;
 	}
 }
 
@@ -165,10 +165,80 @@ ul.tweets {
 	}
 }
 
+#extra-info h2 {
+	margin-bottom: 12px;
+}
+
+#extra-info li {
+	margin-bottom: 12px;
+}
+
+#mc-embedded-subscribe-form {
+	label {
+		display: none;
+	}
+
+	input[type='email'] {
+		width: 100%;
+		font-size: 14px;
+		margin-bottom: 12px;
+	}
+}
+
+#newsflash {
+	margin-bottom: 1em;
+	label {
+		display: inline-block;
+		margin-bottom: .5em;
+		text-transform: uppercase;
+	}
+
+	ul li {
+		display: inline-block;
+		margin-bottom: .5em;
+
+		.category a {
+			color: #636363;
+			font-weight: bold;
+		}
+	}
+}
+
 @media screen and (min-width: 782px) {
 
 	.template-front-page .site-content {
 		margin-top: 0;
+	}
+
+	#newsflash {
+		margin-bottom: 0;
+		line-height: 2.4em;
+		padding: 0 1em;
+		margin: 0.5em 0;
+		height: 2.4em;
+		overflow: hidden;
+		font-size: 0.8em;
+		display: block;
+
+		label {
+			padding-right: 1em;
+			border-right: 1px solid #DEDEDE;
+			margin-bottom: 0;
+			float: left;
+		}
+
+		ul li {
+			padding: 0 0.5em;
+			border-right: 1px solid #DEDEDE;
+
+			.permalink a {
+				color: #D90000;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 
 	#video-overlay {
@@ -240,7 +310,6 @@ ul.tweets {
 			box-sizing: border-box;
 			padding-right: 12px;
 			width: 48%;
-			height: 120px;
 			overflow: hidden;
 		}
 
@@ -248,10 +317,13 @@ ul.tweets {
 			display: block;
 			float: left;
 			margin-right: 12px;
-			margin-bottom: 56px;
 			width: 64px;
 			height: 64px;
 			@include border-radius(50%);
+		}
+
+		.news-content {
+			overflow: hidden;
 		}
 	}
 
@@ -260,6 +332,69 @@ ul.tweets {
 		padding: 0 20px;
 		width: 33%;
 		box-sizing: border-box;
+	}
+
+	#extra-info {
+		margin-bottom: 36px;
+	}
+
+	#success-stories {
+		display: inline-block;
+		float: left;
+		padding: 0 20px;
+		width: 66%;
+		box-sizing: border-box;
+
+		p {
+			display: inline-block;
+			width: 40%;
+			float: left;
+			padding-right: 18px;
+			box-sizing: border-box;
+		}
+
+		ul {
+			display: inline-block;
+			width: 60%;
+			overflow: hidden;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 12px;
+
+			a {
+				display: block;
+				text-indent: -3333px;
+			}
+		}
+
+		#rwg-story {
+			width: 98px;
+			height: 60px;
+			background: url(images/read_write-gold-logo-cmyk.gif) top center no-repeat;
+		}
+
+		#maavis-story {
+			width: 140px;
+			height: 48px;
+			background: url(images/maavis_logo.jpg) top center no-repeat;
+		}
+
+		#ma-story {
+			width: 60px;
+			height: 60px;
+			background: url(images/ma_logo.png) top center no-repeat;
+		}
+
+	}
+
+	#newsletter {
+		display: inline-block;
+		padding: 0 20px;
+		width: 33%;
+		box-sizing: border-box;
+
 	}
 
 

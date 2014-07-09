@@ -20,7 +20,7 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 @import "front-page";
 
 $blue-dark: #133E5B;
-$blue-medium: #2782BB;
+$blue-medium: #226f9f;
 $blue-light: #DAEEF3;
 $fuchsia: #990099;
 // mobile version
@@ -39,6 +39,23 @@ a {
 
 p {
 	line-height: 1.4em;
+}
+
+.btn, input[type="submit"] {
+	background: #FFF;
+	color: #3d3d3d;
+	text-decoration: none;
+	padding: .3em .5em;
+	border: 1px solid #CCC;
+	@include border-radius(4px);
+
+	&:hover {
+		background: #EEE;
+	}
+}
+
+.btn.btn-large {
+	font-size: 16px;
 }
 
 .menu-toggle {
