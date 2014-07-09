@@ -187,10 +187,15 @@ ul.tweets {
 
 #newsflash {
 	margin-bottom: 1em;
+
 	label {
 		display: inline-block;
 		margin-bottom: .5em;
 		text-transform: uppercase;
+	}
+
+	.news-date {
+		background: #FFFF7F;
 	}
 
 	ul li {

@@ -21,18 +21,8 @@ function cloud4all_scripts() {
     wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js');
     wp_register_script( 'cookies', 'http:////cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js');
 
- //    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . "/js/modernizr.custom.25951.js");
-
-	// wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . "/js/scripts.js", array('jquery'), null, false);
-	
-	// wp_enqueue_script( 'card-demo', get_stylesheet_directory_uri() . "/js/card-demo.js", array('jquery', 'jquery-ui', 'cookies'), null, false);
-
 	wp_enqueue_script( 'full script', get_stylesheet_directory_uri() . "/js/min/full-scripts.min.js", array('jquery', 'jquery-ui', 'cookies'), null, false);
 }
-
-// add_action( 'wp_enqueue_scripts', 'cloud4all_scripts');
-// add_action( 'wp_enqueue_scripts', 'cloud4all_dequeue_styles', 11);
-// add_action( 'wp_enqueue_scripts', 'cloud4all_enqueue_styles', 11);
 
 add_action('wp_enqueue_scripts', 'cloud4all_scripts', 11);
 

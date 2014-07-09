@@ -23,7 +23,7 @@ get_header(); ?>
             <?php $the_query = new WP_Query( 'showposts=5' ); ?>
             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
               <li>
-                <span class="category"><?php the_category(' ') ?>:</span>
+                <span class="news-date"><?php the_date('d-m-y'); ?></span>
                 <span class="permalink"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
               </li>
             <?php endwhile;?>
@@ -43,6 +43,10 @@ get_header(); ?>
             <source type="video/ogg;codecs=theora,vorbis" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/Cloud4ll-Train.oggtheora.ogv" />
             <source type="video/webm;codecs=vp8,vorbis" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/Cloud4ll-Train.webmhd.webm" />
             <source type='video/mp4' src="<?php echo get_stylesheet_directory_uri(); ?>/videos/Cloud4ll-Train.mp4" />
+            <track kind="captions" label="English subtitles" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/english-captions.vtt" srclang="en" default></track>
+            <track kind="captions" label="Deutsche Untertitel" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/german-captions.vtt" srclang="ge"></track>
+            <track kind="captions" label="Subtítulos en español" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/spanish-captions.vtt" srclang="es"></track>
+            <track kind="captions" label="Ελληνική Υπότιτλοι" src="<?php echo get_stylesheet_directory_uri(); ?>/videos/greek-captions.vtt" srclang="el"></track>
               <p>Sorry, your browser does not seem to support <code>HTML5 video</code></p>
           </video>
           <label for="home-video">Video of a use case when using Cloud4all</label>
