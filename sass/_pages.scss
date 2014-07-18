@@ -1,0 +1,155 @@
+// The GPII page
+
+ul#gpii-page-menu, ul#gpii-blocks, p#gpii-cues {
+	display: none;
+}
+
+@media screen and (min-width: 782px) {
+
+	p#gpii-cues {
+		display: block;
+		font-size: .9em;
+	}
+
+	ul#gpii-page-menu {
+		display: block;
+		margin: 0 0 1em 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			margin: 0 1em 1em 0;
+			display: inline-block;
+		}
+
+		li a {
+			padding: 0.3em 0.8em;
+		}
+
+		li#GPII a {
+			background: #F0F0F0;
+			color: #000;
+
+			&:hover {
+				background: #FAFAFA;
+			}
+		}
+
+		li#C4a a {
+			background: #3670af;
+			color: #FFF;
+
+			&:hover {
+				background: rgba(54, 112, 175, 0.9);
+			}
+		}
+
+		li#P4a a {
+			background: #657F1A;
+			color: #FFF;
+
+			&:hover {
+				background: rgba(101, 127, 26, .9);
+			}
+		}
+
+		li#used a {
+			background: #000099;
+			color: #FFF;
+
+			&:hover {
+				background: rgba(0, 0, 153, .9);
+			}
+		}
+
+
+		li#uiita a {
+			background: #990000;
+			color: #FFF;
+
+			&:hover {
+				background: rgba(153, 0, 0, .9);
+			}
+		}
+
+		li.active a {
+			color: #636363 !important;
+			background: none !important;
+		}
+	}
+
+	ul#gpii-blocks {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: block;
+	}
+
+	ul#gpii-blocks li {
+		display: inline-block;
+		width: 120px;
+		height: 120px;
+		margin: 0 10px 1em 0;
+		background: #F0F0F0;
+		border: 1px solid #ccc;
+		text-align: center;
+		overflow: hidden;
+
+	}
+
+	ul#gpii-blocks li div.block-title {
+		padding: 0.3em;
+		font-size: 0.9em;
+		line-height: 1.2em;
+		height: 40%;
+		border-bottom: 1px solid #CCC;
+	}
+
+	ul#gpii-blocks li div.block-descr {
+		padding: 0.3em;
+		height: 49%;
+		font-size: 0.8em;
+		line-height: 1.2em;
+	}	
+
+	ul#gpii-blocks div[prjct="C4a"] {
+		background: #3670af;
+		color: #FFF;
+	}
+
+	ul#gpii-blocks div[prjct="P4a"] {
+		background: #657F1A;
+		color: #FFF;
+	}
+
+	ul#gpii-blocks div[prjct="used"] {
+		background: #000099;
+		color: #FFF;
+	}
+
+	ul#gpii-blocks div[prjct="rerc"] {
+		background: #990000;
+		color: #FFF;
+	}
+}
+
+// Consortium page
+ul#consortium-list, ul#collaborators-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		display: inline-block;
+		float: left;
+		width: 140px;
+		height: 120px;
+		margin: 0 2em 1em 0;
+		font-size: 0.8em;
+		vertical-align: bottom;
+	}
+
+	li.top-row {
+		padding-top: 18px;
+	}
+}

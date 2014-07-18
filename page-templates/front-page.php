@@ -110,77 +110,9 @@ get_header(); ?>
           <h2>Tweets</h2>
           <a href="https://twitter.com/Cloud4all7FP" class="btn" data-show-count="false" data-lang="en" title="Follow Cloud4all on Twitter">Follow @Cloud4all7FP</a>
         </header>
-        <div class="tweets-container">
-            <ul class="tweets">
-                <?php
-
-                    error_reporting(0);
-
-                    $tweets = getTweets("Cloud4all7FP", 3, array("exclude_replies" => true, "include_rts" => false));
-
-                    foreach($tweets as $tweet) {
-
-                      try {
-
-                        if ($tweet['text']) {
-
-                          $the_tweet = $tweet['text'];
-
-                          if ($tweet['entities']) {
-                            // i. User_mentions must link to the mentioned user's profile.
-                            if(is_array($tweet['entities']['user_mentions'])){
-                              foreach($tweet['entities']['user_mentions'] as $key => $user_mention){
-                                $the_tweet = preg_replace(
-                                  '/@'.$user_mention['screen_name'].'/i',
-                                      '<a href="http://www.twitter.com/'.$user_mention['screen_name'].'" target="_blank">@'.$user_mention['screen_name'].'</a>',
-                                       $the_tweet);
-                                }
-                            }
-
-                            // ii. Hashtags must link to a twitter.com search with the hashtag as the query.
-                            if(is_array($tweet['entities']['hashtags'])){
-                              foreach($tweet['entities']['hashtags'] as $key => $hashtag){
-                                $the_tweet = preg_replace(
-                                  '/#'.$hashtag['text'].'/i',
-                                  '<a href="https://twitter.com/search?q=%23'.$hashtag['text'].'&src=hash" target="_blank">#'.$hashtag['text'].'</a>',
-                                  $the_tweet);
-                                }
-                            }
-
-                            // iii. Links in Tweet text must be displayed using the display_url
-                            //      field in the URL entities API response, and link to the original t.co url field.
-                            if(is_array($tweet['entities']['urls'])){
-                              foreach($tweet['entities']['urls'] as $key => $link){
-                                $the_tweet = preg_replace(
-                                  '`'.$link['url'].'`',
-                                  '<a href="'.$link['url'].'" target="_blank">'.$link['url'].'</a>',
-                                  $the_tweet);
-                              }
-                            }  
-                          }
-
-                          echo '<li>' .
-                               '<time>' .
-                               date("F d\, Y", strtotime($tweet['created_at'])).
-                               '</time>'.
-                               '<p>'.
-                               $the_tweet.
-                               '</p>'.
-                               '<div class="twitter-intents">
-                                  <p><a class="reply" href="https://twitter.com/intent/tweet?in_reply_to='.$tweet['id_str'].'">Reply</a></p>
-                                  <p><a class="retweet" href="https://twitter.com/intent/retweet?tweet_id='.$tweet['id_str'].'">Retweet</a></p>
-                                  <p><a class="favorite" href="https://twitter.com/intent/favorite?tweet_id='.$tweet['id_str'].'">Favorite</a></p>
-                                  </div>'.
-                                '</li>';
-                        }
-                      } catch (Exception $e) {
-                        echo 'Exception found: ' . $e;
-                      }
-                    }
-                        
-
-                ?>
-        </div>
+        <?php
+          echo do_shortcode('[kebo_tweets title="" count="3" style="list" theme="light" offset="false" avatar="on"]'); 
+        ?>
       </div>
 
     </section> <!-- news-banner -->
@@ -196,7 +128,9 @@ get_header(); ?>
         </ul>
       </div>
       <div id="newsletter">
-        <h2>Subscribe to our newsletter</h2>
+        <h2>Cloud4all Newsletter</h2>
+        <p><a class="latest-newsletter" href="http://pub.lucidpress.com/cloud4all/" target="_blank" title="Check Cloud4all's latest newsletter">Check our digital newsletter</a></p>
+        <h3>Subscribe to our newsletter</h3>
         <form action="http://cloud4all.us6.list-manage.com/subscribe/post?u=f5aad2c587ca21bfd989738b4&amp;id=f0cd05af4d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <label for="mce-EMAIL" id="mce-EMAIL-label">E-mail address</label>
           <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="e-mail address" aria-labelledby="mce-EMAIL-label" required>

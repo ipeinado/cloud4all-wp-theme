@@ -8,6 +8,7 @@
  Version:      0.0.1
  Tags:         light, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twenty-twelve-child
+ License: The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° 289016. More about Cloud4all: http://cloud4all.info
 */
 /*
 For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
@@ -18,6 +19,8 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 @import "card-demo";
 @import "footer";
 @import "front-page";
+@import "widgets";
+@import "pages";
 
 $blue-dark: #133E5B;
 $blue-medium: #226f9f;
@@ -35,6 +38,10 @@ a {
 	&:hover, &:active {
 		color: $blue-dark;
 	}
+}
+
+.entry-content a:visited, .comment-content a:visited {
+	color: $blue-medium;
 }
 
 p {
@@ -80,13 +87,73 @@ p {
 	display: none;
 }
 
-// full screen
-@media screen and (min-width: 960px) {
+.widget-area {
+	display: none;
+}
+
+#secondary ul.menu .current-menu-item > a,
+#secondary ul.menu .current_page_item > a {
+	color: #636363 !important;
+	font-weight: bold;
+}
+
+.site-content article {
+	margin-bottom: 48px;
+	margin-bottom: 3.142857rem;
+	padding-bottom: 24px;
+	padding-bottom: 1.714285714rem;
+}
+
+@media screen and (min-width: 600px) {
+
 	body .site {
 		padding: 0;
 		margin-top: 0;
 		margin-bottom: 48px;
 		margin-bottom: 3.428571429rem;
+	}
+
+	.site-content {
+		float: right; 
+		width: 80.5%;
+		box-sizing: border-box;
+
+		#content {
+			padding: 0;
+		}
+
+		article {
+			padding-left: 36px;
+			padding-right: 36px;
+		}
+	}
+
+	.entry-header .entry-title {
+		font-size: 36px;
+	}
+
+	.widget-area {
+		display: block;
+		width: 15%;
+		float: left;
+		padding-left: 36px;
+
+		.widget a, .widget a:visited {
+			color: $blue-medium;
+
+			&:hover, &:active {
+				color: $blue-dark;
+			}
+		}
+	}
+
+	ul.menu li.menu-item-has-children {
+		margin-bottom: 1em;
+	}
+
+	.nav-single, .comments-area {
+		padding-left: 36px;
+		padding-right: 36px;
 	}
 }
 

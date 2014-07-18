@@ -6,6 +6,8 @@ function cloud4all_dequeue_styles() {
 	wp_dequeue_style('twentytwelve-ie');
 }
 
+add_action( 'wp_enqueue_styles', 'cloud4all_dequeue_styles', 11);
+
 function cloud4all_enqueue_styles() {
 	global $wp_styles;
 	wp_enqueue_style('cloud4all-ie', get_stylesheet_directory_uri() . "/css/ie.css", array("twentytwelve-style"), '1.0');

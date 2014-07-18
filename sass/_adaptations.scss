@@ -55,6 +55,21 @@ html[token="carla"] {
 	#project-banner #video-overlay {
 		background: #000;
 	}
+
+	ul#gpii-blocks li {
+		width: 180px;
+		height: 180px;
+	}
+
+	.widget-area .widget p, .widget-area .widget li, .widget-area .widget .textwidget {
+		font-size: 0.928571429em;
+		line-height: 1.846153846em;
+	}
+
+	.entry-header .comments-link {
+		margin-top: 1.714285714rem;
+		font-size: 0.928571429em;
+	}
 } 
 
 /* SAMMY */
@@ -89,8 +104,11 @@ html[token="sammy"] {
 	}
 
 	.main-navigation .current-menu-item > a, 
+	.main-navigation .current_page_item > a {
+		color: #FFF !important;
+	}
+
 	.main-navigation .current-menu-ancestor > a, 
-	.main-navigation .current_page_item > a, 
 	.main-navigation .current_page_ancestor > a,
 	.main-navigation .current_page_parent > a {
 		color: #000 !important;
@@ -106,8 +124,18 @@ html[token="sammy"] {
 		}
 	}
 
+	.btn {
+		border-color: #FFF;
+		background: #000 !important;
+	}
+
 	.site-header #cards-banner h2 {
 		color: #B8DCF0;
+	}
+
+	#newsflash .news-date {
+		color: #FFFF7F;
+		background: #000;
 	}
 
 	.site-content {
@@ -130,6 +158,10 @@ html[token="sammy"] {
 	.widget-area ul.sub-menu li a {
 		color: #B8DCF0 !important;
 		text-decoration: underline;
+	}
+
+	#secondary ul.menu .current-menu-item>a, #secondary ul.menu .current_page_item>a {
+		color: #FFF !important;
 	}
 
 	footer#colophon, footer#footer-ops  {
@@ -157,8 +189,22 @@ html[token="sammy"] {
 		color: #B8DCF0 !important;
 	}
 
-	textarea {
+	textarea, input {
 		color: #FFF;
 		background: #000;
 	}
+
+	@media screen and (min-width: 782px) {
+		ul#gpii-blocks li {
+			background: #000;
+			border: 1px solid #FFF;
+			color: #FFF;
+		}		
+
+		ul#gpii-page-menu li.active a {
+			color: #FFF !important;
+			background: none !important;
+		}		
+	}
+
 } 
