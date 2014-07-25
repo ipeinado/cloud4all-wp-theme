@@ -21,11 +21,13 @@ For older themes, and themes that do not use wp_enqueue_style() to enqueue their
 @import "front-page";
 @import "widgets";
 @import "pages";
+@import "architecture";
 
 $blue-dark: #133E5B;
 $blue-medium: #226f9f;
 $blue-light: #DAEEF3;
 $fuchsia: #990099;
+
 // mobile version
 .nav-menu.toggled-on ul.sub-menu {
 	display: none;

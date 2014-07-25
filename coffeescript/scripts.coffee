@@ -1,8 +1,15 @@
+tooltipDivStyle =
+		class : 'tooltip'
+
+tooltipDiv = $(
+	'<div>'
+	tooltipDivStyle
+)
+
 $ ->
 
-	console.log "in scripts"
-
 	navMenuTop = $('.main-navigation').offset().top
+
 	pageWidth = $('#page').width() - 48
 
 	$(window).scroll -> 
@@ -22,4 +29,12 @@ $ ->
 		$('#video-overlay').hide()
 		$('#home-video').trigger "play"
 
-### Hello ###
+
+	$('.tooltips').hover(
+		->
+			$(tooltipDiv).text(@.dataset.info)
+			$(this).parent('li').append tooltipDiv
+			$(tooltipDiv).css 'display', 'block'
+		->
+			$(tooltipDiv).css 'display', 'none'
+	)

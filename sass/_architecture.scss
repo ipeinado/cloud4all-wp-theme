@@ -1,0 +1,244 @@
+/* ARCHITECTURE */
+
+@mixin list-link($width, $height) {
+  display: block;
+  width: $width;
+  height: $height;
+  font-size: 0pt;
+  color: #FFF;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-decoration: none;
+}
+
+.no-link:hover {
+  opacity: .5;
+}
+
+figure#archcontainer {
+  width: 624px;
+  height: 495px;
+  position: relative;
+}
+
+ul#architecture_components {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+li#solutions {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  width: 41px;
+  height: 83px;
+
+  a {
+    background: url(images/architecture/solutions.png);
+    @include list-link(41px, 83px);
+
+    &:hover {
+      background: url(images/architecture/solutions_on.png);
+    }
+  }
+}
+
+li#lifecyclemanager {
+  display: block;
+  width: 121px;
+  height: 112px;
+  position: absolute;
+  top: 150px;
+  left: 175px;
+
+  a {
+    background: url(images/architecture/lifecyclemanager.png);
+    @include list-link(121px, 112px);
+
+    &:hover {
+      background: url(images/architecture/lifecyclemanager_on.png);
+    }
+  }
+}
+
+li#lifecyclehandlers {
+  display: block;
+  width: 134px;
+  height: 112px;
+  position: absolute;
+  top: 53px;
+  left: 41px;
+
+  a {
+    background: url(images/architecture/lifecyclehandlers.png);
+    @include list-link(134px, 112px);
+
+    &:hover {
+      background: url(images/architecture/lifecyclehandlers_on.png);
+    }
+  }
+}
+
+li#settingshandler {
+  display: block;
+  width: 134px;
+  height: 136px;
+  position: absolute;
+  top: 199px;
+  left: 41px;
+
+  a {
+    background: url(images/architecture/settingshandler.png);
+    @include list-link(134px, 136px);
+
+    &:hover {
+      background: url(images/architecture/settingshandler_on.png);
+    }
+  }
+}
+
+li#userlistener {
+  display: block;
+  width: 147px;
+  height: 121px;
+  position: absolute;
+  top: 0px;
+  left: 295px;
+
+  a {
+    display: block;
+    background: url(images/architecture/userlistener.png);
+    @include list-link(147px, 121px);
+
+    &:hover {
+      background: url(images/architecture/userlistener_on.png);
+    }
+  }
+}
+
+li#flowmanager {
+  display: block;
+  width: 147px;
+  height: 141px;
+  position: absolute;
+  top: 121px;
+  left: 295px;
+
+  a {
+    display: block;
+    background: url(images/architecture/flowmanager.png);
+    @include list-link(147px, 141px);
+
+    &:hover {
+      background: url(images/architecture/flowmanager_on.png);
+    }
+  }
+}
+
+li#transformer {
+  display: block;
+  width: 78px;
+  height: 80px;
+  position: absolute;
+  top: 290px;
+  left: 218px;
+
+  a {
+    display: block;
+    background: url(images/architecture/transformer.png);
+    @include list-link(78px, 80px);
+
+    &:hover {
+      background: url(images/architecture/transformer_on.png);
+    }
+  }
+}
+
+li#matchmaker {
+  display: block;
+  width: 147px;
+  height: 131px;
+  position: absolute;
+  top: 262px;
+  left: 295px;
+
+  a {
+    background: url(images/architecture/matchmaker.png);
+    @include list-link(147px, 131px);
+
+    &:hover {
+      background: url(images/architecture/matchmaker_on.png);
+    }
+  }
+}
+
+li#solutionsregistry {
+  display: block;
+  width: 147px;
+  height: 102px;
+  position: absolute;
+  top: 393px;
+  left: 295px;
+
+  a {
+    background: url(images/architecture/solutionsregistry.png);
+    @include list-link(147px, 102px);
+
+    &:hover {
+      background: url(images/architecture/solutionsregistry_on.png);   
+    }
+  }
+}
+
+li#preferencesserver {
+  display: block;
+  width: 144px;
+  height: 123px;
+  position: absolute;
+  top: 53px;
+  left: 442px;
+
+  a {
+    background: url(images/architecture/preferencesserver.png);
+    @include list-link(144px, 123px);
+
+    &:hover {
+      background: url(images/architecture/preferencesserver_on.png);
+    }
+  }
+}
+
+li#reporters {
+  display: block;
+  width: 182px;
+  height: 171px;
+  position: absolute;
+  top: 199px;
+  left: 442px;
+
+  a {
+    background: url(images/architecture/reporters.png);
+    @include list-link(182px, 171px);
+
+    &:hover {
+       background: url(images/architecture/reporters_on.png);
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  left: -50%;
+  bottom: 86%;
+  width: 300px;
+  font-size: .8em;
+  z-index: 100;
+  background: black;
+  padding: .5em 1em;
+  border-radius: 5px;
+  color: white;
+}

@@ -1,7 +1,14 @@
 (function() {
+  var tooltipDiv, tooltipDivStyle;
+
+  tooltipDivStyle = {
+    "class": 'tooltip'
+  };
+
+  tooltipDiv = $('<div>', tooltipDivStyle);
+
   $(function() {
     var navMenuTop, pageWidth;
-    console.log("in scripts");
     navMenuTop = $('.main-navigation').offset().top;
     pageWidth = $('#page').width() - 48;
     $(window).scroll(function() {
@@ -20,14 +27,18 @@
         });
       }
     });
-    return $('#video-play-link').click(function(e) {
+    $('#video-play-link').click(function(e) {
       e.preventDefault();
       $('#video-overlay').hide();
       return $('#home-video').trigger("play");
     });
+    return $('.tooltips').hover(function() {
+      $(tooltipDiv).text(this.dataset.info);
+      $(this).parent('li').append(tooltipDiv);
+      return $(tooltipDiv).css('display', 'block');
+    }, function() {
+      return $(tooltipDiv).css('display', 'none');
+    });
   });
-
-
-  /* Hello */
 
 }).call(this);
