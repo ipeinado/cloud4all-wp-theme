@@ -2,7 +2,7 @@
 
 .template-front-page {
 	h2 {
-		font-size: 18px;
+		font-size: 1.2em;
 	}
 
 	p {
@@ -29,6 +29,7 @@
 	height: 320px;
 	z-index: 3;
 	background: url(images/project-banner-background.png) top center no-repeat;
+	background-size: cover;
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
@@ -359,30 +360,27 @@ a.latest-newsletter {
 
 		li {
 			display: inline-block;
-			margin-right: 12px;
+			margin-right: 1em;
+			float: left;
 
 			a {
-				display: block;
-				text-indent: -3333px;
+				display: block;			
 			}
 		}
 
-		#rwg-story {
+		#rwg-story img {
 			width: 98px;
 			height: 60px;
-			background: url(images/read_write-gold-logo-cmyk.gif) top center no-repeat;
 		}
 
-		#maavis-story {
+		#maavis-story img {
 			width: 140px;
 			height: 48px;
-			background: url(images/maavis_logo.jpg) top center no-repeat;
 		}
 
-		#ma-story {
+		#ma-story img {
 			width: 60px;
 			height: 60px;
-			background: url(images/ma_logo.png) top center no-repeat;
 		}
 
 	}

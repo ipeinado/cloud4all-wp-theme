@@ -46,13 +46,15 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 class="site-title" id="logo"><?php bloginfo( 'name' ); ?></h1></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 class="site-title" id="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header_logo.png" alt="Cloud4all logo"></h1></a>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
 		</hgroup>
 
-		<div id="cards-banner">
-			<div id='nfc-reader'></div>
+		<div id="cards-banner" aria-hidden="true">
+			<div id='nfc-reader'>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/nfc_reader.png" alt="NFC reader" />
+			</div>
 			<h2>See how Cloud4all works</h2>
 			<p id="card-tooltip-text">Drag one of the cards over the NFC reader in the right and see how the contents will autoadapt to the user's needs and preferences.</p>
 			<ul id="card-list">

@@ -42,6 +42,10 @@ a {
 	}
 }
 
+.hidden-text {
+	color: #FFF;
+}
+
 .entry-content a:visited, .comment-content a:visited {
 	color: $blue-medium;
 }
@@ -61,6 +65,19 @@ p {
 	&:hover {
 		background: #EEE;
 	}
+}
+
+*::-webkit-input-placeholder {
+	color: #666;
+}
+*:-moz-placeholder {
+	color: #666;
+}
+*::-moz-placeholder {
+	color: #666;
+}
+*:-ms-input-placeholder {
+	color: #666;
 }
 
 .btn.btn-large {
@@ -94,7 +111,9 @@ p {
 }
 
 #secondary ul.menu .current-menu-item > a,
-#secondary ul.menu .current_page_item > a {
+#secondary ul.menu .current_page_item > a,
+#secondary ul.menu .current-page-ancestor > a,
+#secondary ul.menu .current_page_ancestor > a {
 	color: #636363 !important;
 	font-weight: bold;
 }

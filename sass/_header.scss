@@ -8,14 +8,21 @@ $header_background: #F0EFEC;
 	border-top: 1.25em solid #3670AF;
 	background: $header_background url(images/bg_header.png) top left repeat-x;
 
-	h1#logo {
+	h1 img {
 		display: block;
 		margin: 0 auto 20px;
 		width: 260px;
 		height: 78px;
-		background: transparent url(images/header_logo.png) top left no-repeat;
-		text-indent: -3333px;
 	}
+
+	// h1#logo {
+	// 	display: block;
+	// 	margin: 0 auto 20px;
+	// 	width: 260px;
+	// 	height: 78px;
+	// 	background: transparent url(images/header_logo.png) top left no-repeat;
+	// 	text-indent: -3333px;
+	// }
 }
 
 .main-navigation {

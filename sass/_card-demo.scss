@@ -32,7 +32,12 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		background: transparent url(images/nfc_reader.png) top right no-repeat;
+
+		img {
+			width: 70px;
+			height: 132px;
+		}
+
 	}
 
 	#nfc-reader.active {

@@ -60,19 +60,19 @@ get_header(); ?>
       <div class="section" id="research-section">
         <h2>Research</h2>
         <p>Cloud4all is a research project that is moving beyond the state of the art in several aspects. Discover our research!</p>
-        <a href="<?php echo home_url('/research/'); ?>" class="btn btn-large" title="Read more about our research and its results">Read more</a>
+        <a href="<?php echo home_url('/research/'); ?>" class="btn btn-large" title="Read more about our research and its results">More Research</a>
       </div>
 
       <div class="section" id="development-section">
         <h2>Development</h2>
         <p>Cloud4all is builiding an infrastructure that will be implemented in the real world. <strong>Join the effort!</strong></p>
-        <a href="<?php echo home_url('/development/'); ?>" class="btn btn-large" title="Read more about the developments that are taking place within Cloud4all">Read more</a>
+        <a href="<?php echo home_url('/development/'); ?>" class="btn btn-large" title="Read more about the developments that are taking place within Cloud4all">More development</a>
       </div>
 
       <div class="section" id="dissemination-section">
         <h2>Dissemination</h2>
         <p>We are present in events all around the globe. Learn more about our vision, contact us and collaborate with us!</p>
-        <a href="<?php echo home_url('/dissemination/'); ?>" class="btn btn-large" title="Read more about our dissemination activities">Read more</a>
+        <a href="<?php echo home_url('/dissemination/'); ?>" class="btn btn-large" title="Read more about our dissemination activities">More dissemination</a>
       </div>
 
     </section> <!-- Sections banner -->
@@ -122,9 +122,9 @@ get_header(); ?>
         <h2>Success stories</h2>
         <p>Up to 19 accessibility solutions are integrating with Cloud4all. Check some success stories</p>
         <ul>
-          <li><a href="<?php echo home_url('/development/solutions/readwrite-gold/'); ?>" title="Read&Write Gold" class="success-story-link" id="rwg-story">Read&Write Gold</a></li>
-          <li><a href="<?php echo home_url('/development/solutions/maavis/'); ?>" title="Maavis" class="success-story-link" id="maavis-story">Maavis</a></li>
-          <li><a href="<?php echo home_url('/development/solutions/mobile-accessibility-for-android/'); ?>" title="Mobile Accessibility for Android" class="success-story-link" id="ma-story">Mobile Accessibility for Android</a></li>
+          <li><a href="<?php echo home_url('/development/solutions/readwrite-gold/'); ?>" title="Read&Write Gold" class="success-story-link" id="rwg-story"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/read_write-gold-logo-cmyk.gif" alt="Read & Write Logo" /></a></li>
+          <li><a href="<?php echo home_url('/development/solutions/maavis/'); ?>" title="Maavis" class="success-story-link" id="maavis-story"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/maavis_logo.jpg" alt="Learn more about Maavis" /></a></li>
+          <li><a href="<?php echo home_url('/development/solutions/mobile-accessibility-for-android/'); ?>" title="Mobile Accessibility for Android" class="success-story-link" id="ma-story"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ma_logo.png" alt="Learn more about Mobile Accessibility for Android" /></a></li>
         </ul>
       </div>
       <div id="newsletter">
@@ -135,7 +135,6 @@ get_header(); ?>
           <label for="mce-EMAIL" id="mce-EMAIL-label">E-mail address</label>
           <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="e-mail address" aria-labelledby="mce-EMAIL-label" required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_f5aad2c587ca21bfd989738b4_f0cd05af4d" value=""></div>
           <div class="clear"><input value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-large" type="submit"></div>
       </div>
     </aside>

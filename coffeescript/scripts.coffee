@@ -18,11 +18,12 @@ $ ->
 				$('.main-navigation').css
 					position: 'fixed'
 					top: 0
-					width: pageWidth
+					width: pageWidth;
 		else
 			$('.main-navigation').css
 				position: 'static'
 				top: '0px'
+
 
 	$('#video-play-link').click (e) ->
 		e.preventDefault()
